@@ -1,7 +1,7 @@
 use <bcube.scad>
 
 cr=1;
-cres=4;
+cres=360;
 
 module column() {
 
@@ -39,8 +39,10 @@ translate([20,-13,0])
 difference(){
     // Main body
     bcube([198,137,7],4,cres);
+    translate([0,0,4])
+        bcube([196,135,2],4,cres);
     translate([0,0,-1])
-        bcube([196,135,7],4,cres);
+        bcube([196,135,6],4,cres);
     // Touchpad
     translate([0,35,0])
         bcube([62,34,10],cr,cres);
